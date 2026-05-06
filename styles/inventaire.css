@@ -1,0 +1,29 @@
+  body { background-color: #ffffff; color: #333; font-family: 'Roboto', sans-serif; margin: 0px 0px 0px 0px;  }
+        .inventory-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; text-align: center; }
+        .inventory-title { font-family: 'Cinzel', serif; color: #d4af37; margin-bottom: 30px; margin: 0 }
+        
+        /* Grille d'inventaire */
+        .inventory-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; margin-top: 30px; }
+        .inventory-item { border: 1px solid #eee; padding: 15px; border-radius: 10px; background: #f9f9f9; transition: 0.3s; }
+        .inventory-item:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+        /* Boutons */
+        .btn { border-radius: 15px; border: none; padding: 8px 15px; cursor: pointer; font-weight: bold; transition: transform 0.2s; }
+        .btn:hover { transform: scale(1.05); }
+        .btn-sell { background-color: #e74c3c; color: white; }
+        .btn-use { background-color: #27ae60; color: white; }
+
+        /* STYLE DE LA MODALE (Confirmation) */
+        .modal-overlay {
+            display: none; /* Caché par défaut */
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000; align-items: center; justify-content: center;
+        }
+        .modal-content {
+            background: white; padding: 30px; border-radius: 15px;
+            max-width: 400px; width: 90%; text-align: center;
+            border: 2px solid #d4af37; box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        .modal-content h2 { font-family: 'Cinzel', serif; color: #d4af37; margin-top: 0; }
+        .modal-buttons { display: flex; justify-content: space-around; margin-top: 25px; }

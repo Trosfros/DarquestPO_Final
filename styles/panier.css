@@ -1,0 +1,75 @@
+
+        body { background-color: #fcfcfc; color: #333; font-family: 'Poppins', sans-serif; margin: 0; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; min-height: 70vh; }
+
+        .cart-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #d4af37; padding-bottom: 15px; margin-bottom: 30px; }
+        .cart-title { color: #111; font-family: 'Cinzel', serif; margin: 0; font-size: 2rem; }
+
+        .cart-layout { display: flex; gap: 40px; align-items: flex-start; }
+
+        .cart-items-list { flex: 1; }
+
+        .error-banner {
+            background: #fff5f5; border-left: 5px solid #e74c3c; color: #c0392b;
+            padding: 15px 20px; border-radius: 8px; margin-bottom: 25px;
+            display: flex; align-items: center; gap: 15px;
+        }
+
+        .cart-item {
+            display: flex; align-items: center; background: #fff; padding: 20px;
+            margin-bottom: 15px; border-radius: 12px; gap: 20px;
+            border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+        .cart-item.item-error { border: 1px solid #e74c3c; background: #fffafa; }
+
+        .item-img-box { width: 110px; height: 110px; background: #f9f9f9; border-radius: 8px; overflow: hidden; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; }
+        .item-img-box img { max-width: 85%; max-height: 85%; object-fit: contain; }
+
+        .item-details { flex: 1; }
+        .stock-warning { color: #e74c3c; font-size: 0.85rem; font-weight: bold; margin-top: 5px; }
+
+        .quantity-control { display: flex; align-items: center; background: #f0f0f0; border-radius: 25px; padding: 5px 15px; margin-top: 12px; width: fit-content; }
+        .qty-btn { border: none; background: none; cursor: pointer; color: #555; padding: 0 10px; font-size: 1.2rem; transition: 0.2s; }
+        .qty-btn:hover { color: #d4af37; }
+
+        .cart-summary { width: 380px; position: sticky; top: 100px; }
+        .summary-box { background: #fff; padding: 30px; border-radius: 15px; border: 1px solid #d4af37; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+        .btn-order {
+            background: #d4af37; color: #000; border: none; width: 100%; padding: 18px;
+            font-weight: bold; border-radius: 10px; cursor: pointer; font-size: 1.1rem;
+            transition: 0.3s; text-transform: uppercase; margin-top: 15px;
+        }
+        .btn-order:hover:not(:disabled) { background: #000; color: #d4af37; }
+        .btn-order:disabled { background: #ccc; cursor: not-allowed; color: #777; }
+
+        .secure-badge {
+            margin-top: 20px; padding: 10px;
+        }
+
+        /* Overlay */
+        .order-success-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 2000; justify-content: center; align-items: center; }
+        .success-card { background: white; padding: 40px; border-radius: 20px; text-align: center; transform: scale(0.7); transition: 0.4s; border-top: 8px solid #d4af37; max-width: 450px; }
+        .success-card.show { transform: scale(1); }
+
+        @keyframes progress { from { width: 0; } to { width: 100%; } }
+        /* Style pour l'input de quantité manuel */
+.qty-input {
+    width: 45px;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+
+    outline: none;
+    
+}
+
+/* Cache les flèches par défaut du navigateur */
+.qty-input::-webkit-inner-spin-button,
+.qty-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
