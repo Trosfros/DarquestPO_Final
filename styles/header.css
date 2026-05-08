@@ -1,5 +1,4 @@
-
-    /* --- CONFIGURATION GLOBALE --- */
+/* --- CONFIGURATION GLOBALE --- */
     .top-nav, .sub-nav {
         display: flex;
         align-items: center;
@@ -7,9 +6,9 @@
         padding: 10px 20px;
         flex-wrap: wrap;
         width: 100% !important;
-        background-color:black;
+        box-sizing: border-box; 
+        background-color: black;
     }
-  
    
 
     /* --- RECHERCHE --- */
