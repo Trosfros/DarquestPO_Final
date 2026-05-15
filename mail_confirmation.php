@@ -84,7 +84,7 @@ ob_start();
                               $domain = 'http://localhost'; 
                           }
                           ?>
-                          <a href="http://142.44.247.33/~usager22/Darquest/validate.php?guid=<?= $guid ?>" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">Confirmer</a>
+                          <a href="<?= $domain . "/validate.php?guid=" . $guid?>" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">Confirmer</a>
                         </td>
                       </tr>
                     </table>

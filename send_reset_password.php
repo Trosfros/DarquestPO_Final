@@ -21,9 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_param("ss", $guid, $alias);
         $stmt->execute();
 
-     
-        $domain = "http://142.44.247.33/~usager22"; 
-        
         ob_start();
         require 'reset_password.php'; 
         $body = ob_get_clean(); 

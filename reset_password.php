@@ -57,9 +57,7 @@
             <td align="left" style="padding: 20px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666666;">
               <p style="margin: 0;">Si le bouton ne fonctionne pas, copiez et collez ce lien dans votre navigateur :</p>
               <p style="margin: 10px 0; word-break: break-all;">
-                <a href="<?= trim($domain) ?>/Darquest/reset_password_form.php?guid=<?= trim($guid) ?>" style="color: #1a82e2;">
-                  <?= trim($domain) ?>/Darquest/reset_password_form.php?guid=<?= trim($guid) ?>
-                </a>
+                <a href="<?= $domain . "/DarquestVraiVersion-main/reset_password_form.php?guid=" . $guid?>" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">Confirmer</a>
               </p>
             </td>
           </tr>
