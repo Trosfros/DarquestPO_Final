@@ -1,10 +1,12 @@
-<?php
+<?php 
 require_once 'config.php';
 require_once 'Email.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['guid'])) {
+    $hash = password_hash($_POST['mdp'], PASSWORD_BCRYPT);
+
     $stmt = $connexion->prepare("UPDATE Joueurs SET MDP = ? WHERE GuidReset = ?");
-    $stmt->bind_param("ss", password_hash($_POST['mdp'], PASSWORD_BCRYPT), $_POST['guid']);
+    $stmt->bind_param("ss", $hash, $_POST['guid']);
     $stmt->execute();
 
     header("Location: login.php");
