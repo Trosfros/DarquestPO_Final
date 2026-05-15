@@ -4,10 +4,20 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-$serveur = "localhost";
-$utilisateur = "usager22";
-$motdepasse = "BhgXWedvSMAV";
-$nomBaseDonnees = "usager22";
+$scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$domain = $scheme . '://' . $_SERVER['HTTP_HOST'];
+
+if ($_SERVER['SERVER_ADDR'] == "158.69.48.57") {
+    $serveur = "158.69.48.109";
+    $utilisateur = "equipe14";
+    $motdepasse = "u2ea2e47";
+    $nomBaseDonnees = "dbdarquest14";
+} else {
+    $serveur = "localhost";
+    $utilisateur = "root";
+    $motdepasse = "";
+    $nomBaseDonnees = "dbdarquest14";
+}
 
 $connexion = new mysqli($serveur, $utilisateur, $motdepasse, $nomBaseDonnees);
 
