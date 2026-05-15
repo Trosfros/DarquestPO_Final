@@ -5,7 +5,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-$domain = $scheme . '://' . $_SERVER['HTTP_HOST'];
+$domain = $scheme . '://' . $_SERVER['HTTP_HOST'] . '/~darquest14';
 
 if ($_SERVER['SERVER_ADDR'] == "158.69.48.57") {
     $serveur = "158.69.48.109";
